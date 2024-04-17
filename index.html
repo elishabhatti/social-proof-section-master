@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap" rel="stylesheet">
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'League Spartan';
+        background-image: url(/images/bg-pattern-top-desktop.svg);
+        background-image: url(/images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+      }
+      .section-1  {
+        display: flex;
+        padding: 4rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      h1 {
+        color: hsl(300, 43%, 22%);
+        font-weight: 700;
+      }
+      .section-2 {
+      display: grid;
+      width: 100vw;
+      padding: 4rem;
+      grid-gap: 1rem;
+      transition: all 0.35s;
+      grid-template-areas:
+      "card-1 card-2 card-3"
+      ;
+      }
+      img {
+        border-radius: 50%;
+      }
+      .about-stars {
+        color: hsl(300, 43%, 22%);
+      }
+      .about-buyer{
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+      }
+      p {
+        line-height: 23px;
+      }
+      .card {
+        background-color: hsl(300, 43%, 22%);
+        padding: 30px;
+        border-radius: 10px;
+        height: auto;
+      }
+      .stars {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        border-radius: 10px;
+        background-color:hsl(300, 24%, 96%);
+        margin: 10px;
+      }
+      #card-1 {
+        grid-area: card-1;
+      }
+      #card-2 {
+        grid-area: card-2;
+      }
+      #card-3 {
+        grid-area: card-3;
+      }
+      .heading  {
+        width: 50%;
+        margin: 20px;
+      }
+      .white, .name {
+        color: white;
+      }
+      .about {
+        margin-left: 20px;
+      }
+      .verify {
+        color: hsl(333, 80%, 67%);
+      }
+      .star-2 {
+        margin-left: 50px;
+      }
+      .star-3 {
+        margin-left: 100px;
+      }
+      .card-2 {
+        margin-top: 20px;
+      }
+      .card-3 {
+        margin-top: 40px;
+      }
+      .about-stars {
+        margin-left: 30px;
+      }
+      span img {
+        margin-left: 10px;
+      }
+      @media (max-width:959px) {
+        .section-2 {
+          padding: 1rem;
+          grid-template-areas: 
+          "card-1"
+          "card-2"
+          "card-3"
+          ;
+          padding: 1rem;
+        }
+        body {
+          background-image: url(/images/bg-pattern-top-mobile.svg);
+          background-image: url(/images/bg-pattern-bottom-mobile.svg);
+          background-repeat: no-repeat;
+        }
+        .section-1 {
+          padding: 1rem;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .heading {
+          text-align: center;
+          width: 100%;
+        }
+        .card-2, .card-3 {
+          margin: 0;
+        }
+        .star-1, .star-2, .star-3 {
+          margin-top: 10px;
+          margin-left: 0;
+        }
+        
+      }
+      @media (max-width:433px) {
+        .stars {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section-1">
+        <div class="heading">
+          <h1>10,000+ of our users love our products.</h1>
+          <p>We only provide great products combined with excellent customer service.
+                See what our satisfied customers are saying about our services.</p>
+        </div>
+        <div class="star">
+          <div class="stars star-1">
+            <span><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""></span>
+            <p class="about-stars">Rated 5 Stars in Reviews</p>
+          </div>
+          <div class="stars star-2">
+            <span><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""></span>
+            <p class="about-stars">Rated 5 Stars in Report Guru</p>
+          </div>
+          <div class="stars star-3">
+            <span><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""><img src="/images/icon-star.svg" alt=""></span>
+            <p class="about-stars">Rated 5 Stars in BestTech</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-2">
+        <div class="card">
+          <div class="card-1" id="card-1">
+            <div class="about-buyer">
+              <div class="img">
+                <img src="/images/image-colton.jpg" alt="">
+              </div>
+              <div class="about">
+                <p class="name">Colton Smith</p>
+                <p class="verify">Verified Buyer</p>
+              </div>
+            </div>
+            <div class="buyer-statement">
+              <p class="white">"We needed the same printer design as the one we had order a week prior. Not only did they find the original order but, we also received it on time. Excellent!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card-2" id="card-2">
+          <div class="about-buyer">
+          <div class="img">
+            <img src="/images/image-irene.jpg" alt="">
+          </div>
+            <div class="about">
+              <p class="name">Irene Roberts</p>
+            <p class="verify">Verified Buyer</p>
+            
+            </div>
+          </div>
+          <div class="buyer-statement">
+            <p class="white">"Customer service is always excellent and very quick turn around. Completely
+              delighted with the simplicity of the purchase and the speed of delivery."</p>
+          </div>
+        </div>
+        <div class="card card-3" id="card-3">
+          <div class="about-buyer">
+          <div class="img">
+            <img src="/images/image-anne.jpg" alt="">
+          </div>
+          <div class="about">
+            <p class="name">Anne Wallace</p>
+            <p class="verify">Verified Buyer</p>
+          </div>
+          </div>
+          <div class="buyer-statement">
+            <p class="white">"Put an order with this company and can only praise them for the very high
+              standard. Will definitely use them again and recommend them to everyone!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
